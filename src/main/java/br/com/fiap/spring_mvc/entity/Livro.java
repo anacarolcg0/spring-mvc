@@ -1,10 +1,7 @@
 package br.com.fiap.spring_mvc.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -22,9 +19,10 @@ public class Livro {
     @NotNull(message = "A categoria é obrigatória.")
     private Categoria categoria;
     private String editora;
-    @DecimalMin(value = "0.99", message = "O preço deve ser o mínimo 0.99")
+    @DecimalMin(value = "0.99", message = "O preço deve ser no mínimo 0.99.")
     private BigDecimal preco;
-    @Pattern(regexp = "^970\\d{7}$|^970\\d{10}$", message = "ISBN fora do padrão")
+    @Pattern(regexp = "^970\\d{7}$|^970\\d{10}$",
+            message = "ISBN fora do padrão")
     private String isbn;
     private LocalDate dataPublicacao;
 
