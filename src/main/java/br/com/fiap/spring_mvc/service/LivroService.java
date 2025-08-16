@@ -16,7 +16,7 @@ public class LivroService {
         this.livroRepository = livroRepository;
     }
 
-    //CRUD -> Create, Read, Update, Delete
+    // CRUD -> Create, Read, Update, Delete
     public Livro createLivro(Livro livro) {
         return livroRepository.save(livro);
     }
@@ -29,7 +29,7 @@ public class LivroService {
         return livroRepository.findAll();
     }
 
-    public Livro updateLivro (Livro livro) {
+    public Livro updateLivro(Livro livro) {
         return livroRepository.save(livro);
     }
 
